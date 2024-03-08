@@ -15,7 +15,8 @@ public class Sketch extends PApplet {
     * values here i.e background, stroke, fill etc.
     */
     public void setup() {
-    random (255);
+    int intRandom;
+    if (intRandom <= 68 && intRandom >= 0);
     background (102, 204, 255);
     }
   
@@ -26,14 +27,14 @@ public class Sketch extends PApplet {
   
     // Draw four petals for the flower
     fill (204, 51, 255);
-    ellipse (300, 300, 200, 200);
-    ellipse (500, 300, 200, 200); 
-    ellipse (300, 500, 200, 200);
+    ellipse ((float) (width/3), 300, 200, 200);
+    ellipse ((float) (width/3), 300, 200, 200); 
+    ellipse ((float) (width/2), 500, 200, 200);
     ellipse (500, 500, 200, 200);
   
     // Draw the middle of the flower
     fill (255, 255, 0);
-    ellipse (400, 400, 200, 200);
+    ellipse (4, 400, 200, 200);
   
     // Draw the stem of the flower
     line (400, 500, 400, 800);
