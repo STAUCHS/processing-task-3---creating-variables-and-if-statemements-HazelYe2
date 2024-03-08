@@ -31,6 +31,9 @@ public class Sketch extends PApplet {
     public void setup() {
     background(102, 204, 255);
     // Add random
+    Random myRand = new
+    Random();
+    myRand.nextInt(100);
     min = 0;
     max = 101;
     intRandom = (int)Math.floor(Math.random() * (max - min + 1) + min);
@@ -41,14 +44,6 @@ public class Sketch extends PApplet {
     */
     public void draw() {
     /* Flower */
-    textSize(25);
-    fill(0, 0, 0);
-
-    intHours = hour();
-    intMinutes = minute();
-
-    text(intHours, 10, 30);
-    text(intMinutes, 50, 30);
     
     if (intRandom <= 68 && intRandom >= 0) {
     background(247, 16, 0);
@@ -82,6 +77,17 @@ public class Sketch extends PApplet {
     // Draw the dirt/grass 
     fill (81, 21, 21);
     rect (0, 770, 800, 800);
+
+    // Add the current time
+
+    textSize(30);
+    fill(0, 0, 0);
+
+    intHours = hour();
+    intMinutes = minute();
+
+    text(intHours, 10, 30);
+    text(intMinutes, 50, 30);
 
     }
   }
